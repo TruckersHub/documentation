@@ -61,18 +61,6 @@ const config = {
     ],
   ],
 
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-content-docs',
-  //     {
-  //       id: 'gateway',
-  //       path: 'gateway',
-  //       routeBasePath: 'gateway',
-  //       sidebarPath: './sidebars.js'
-  //     },
-  //   ],
-  // ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -84,7 +72,8 @@ const config = {
       navbar: {
         logo: {
           alt: 'TruckersHub Logo',
-          src: 'img/brand.png',
+          src: 'img/brand_light.png',
+          srcDark: 'img/brand.png',
         },
         items: [
           {
