@@ -1,0 +1,233 @@
+.heroBanner {
+  padding: 5rem 0 4.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(41, 140, 216, 0.18),
+      transparent 45%
+    ),
+    var(--ifm-background-color);
+
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroLogo {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  margin-bottom: 1rem;
+  font-size: 3.4rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  margin: 0 auto 0.75rem;
+  max-width: 750px;
+
+  font-size: 1.35rem;
+  font-weight: 500;
+
+  color: var(--ifm-color-emphasis-800);
+}
+
+.heroDescription {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--ifm-color-emphasis-600);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  flex-wrap: wrap;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.documentation {
+  padding: 4.5rem 0 6rem;
+
+  background: var(--ifm-background-surface-color);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader p {
+  margin: 0;
+
+  color: var(--ifm-color-emphasis-600);
+}
+
+.cardGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.25rem;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 290px;
+
+  padding: 1.75rem;
+
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+
+  background: var(--ifm-background-color);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--ifm-color-primary);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cardIcon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin-bottom: 1.25rem;
+
+  border-radius: 8px;
+
+  background: rgba(41, 140, 216, 0.12);
+
+  color: var(--ifm-color-primary);
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem;
+
+  font-size: 1.25rem;
+}
+
+.cardDescription {
+  flex: 1;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+
+  color: var(--ifm-color-emphasis-700);
+}
+
+.cardButton {
+  align-self: flex-start;
+
+  font-size: 0.9rem;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 640px) {
+  .heroBanner {
+    padding: 3.5rem 1rem;
+  }
+
+  .heroLogo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroDescription {
+    font-size: 0.95rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
+
+  .documentation {
+    padding: 3.5rem 1rem 5rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+}
